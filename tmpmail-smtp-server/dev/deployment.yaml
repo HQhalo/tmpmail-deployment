@@ -20,6 +20,6 @@ spec:
             - containerPort: 25
           env:
             - name: REDIS_HOST
-              value: redis-0.redis.default.svc.k8s-dev-01.k8s-dev
+              value: redis-0.redis.default.svc.k8s-dev-01.local
             - name: REDIS_PORT
               value: "6379"
