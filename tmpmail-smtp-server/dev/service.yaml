@@ -7,6 +7,5 @@ spec:
   ports:
   - port: 25
     targetPort: 25
-    nodePort: 3025
   selector:
     app: tmpmail-smtp-server
