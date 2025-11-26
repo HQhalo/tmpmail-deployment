@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tmpmail-smtp-server
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: tmpmail-smtp-server
+  template:
+    metadata:
+      labels:
+        app: tmpmail-smtp-server
+    spec:
+      containers:
+        - image: ""
+          name: tmpmail-smtp-server
+          ports:
+            - containerPort: 25

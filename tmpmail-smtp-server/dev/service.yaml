@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tmpmail-smtp-server
+spec:
+  type: NodePort
+  ports:
+  - port: 25
+    targetPort: 25
+    nodePort: 3025
+  selector:
+    app: tmpmail-smtp-server
