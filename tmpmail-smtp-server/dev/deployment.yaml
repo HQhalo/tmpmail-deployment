@@ -14,7 +14,7 @@ spec:
         app: tmpmail-smtp-server
     spec:
       containers:
-        - image: ""
+        - image: ghcr.io/hqhalo/tmpmail-smtp-server:latest
           name: tmpmail-smtp-server
           ports:
             - containerPort: 25
