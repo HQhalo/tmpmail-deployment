@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: tmpmail-smtp-server
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 25
     targetPort: 25
+    protocol: TCP
   selector:
     app: tmpmail-smtp-server
