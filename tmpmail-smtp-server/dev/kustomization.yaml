@@ -1,7 +1,6 @@
 resources:
   - deployment.yaml
   - service.yaml
-
 images:
   - name: ghcr.io/hqhalo/tmpmail-smtp-server
-    newTag: main
+    newTag: sha-759fd5e
