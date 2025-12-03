@@ -25,3 +25,5 @@ spec:
               value: shortly_rw_user
             - name: DATABASE_PASSWORD
               value: "12345678"
+            - name: spring_profile
+              value: dev
