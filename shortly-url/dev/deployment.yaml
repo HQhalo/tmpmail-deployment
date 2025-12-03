@@ -14,7 +14,7 @@ spec:
         app: shortly-url
     spec:
       containers:
-        - image: ghcr.io/hqhalo/shortly-url:latest
+        - image: ghcr.io/hqhalo/shorty-url:latest
           name: shortly-url
           ports:
             - containerPort: 8080

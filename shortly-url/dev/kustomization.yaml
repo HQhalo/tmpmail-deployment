@@ -4,5 +4,5 @@ resources:
   - ingress.yaml
 
 images:
-  - name: ghcr.io/hqhalo/shortly-url
+  - name: ghcr.io/hqhalo/shorty-url
     newTag: sha-c2cca55
