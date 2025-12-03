@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shortly-url
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: shortly-url
+  template:
+    metadata:
+      labels:
+        app: shortly-url
+    spec:
+      containers:
+        - image: ghcr.io/hqhalo/shortly-url:latest
+          name: shortly-url
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DATABASE_URL
+              value: jdbc:mysql://mysql-0.mysql.default.svc.k8s-dev-homelab.local:3306/shortly
+            - name: DATABASE_USER
+              value: shortly_rw_user
+            - name: DATABASE_PASSWORD
+              value: "12345678"

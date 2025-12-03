@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shortly-url
+  annotations:
+    kubernetes.io/ingress.class: cilium 
+spec:
+  rules:
+    - host: shortly-url.homelab.services
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: shortly-url
+                port:
+                  number: 80

@@ -1,0 +1,6 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+images:
+  - name: ghcr.io/hqhalo/shortly-url
+    newTag: sha-c2cca55
