@@ -2,7 +2,6 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
-
 images:
   - name: ghcr.io/hqhalo/shorty-url
-    newTag: sha-c2cca55
+    newTag: sha-1f39183
