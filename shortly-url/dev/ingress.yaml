@@ -2,9 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: shortly-url
-  annotations:
-    kubernetes.io/ingress.class: cilium 
 spec:
+  ingressClassName: nginx
   rules:
     - host: shortly-url.homelab.services
       http:
